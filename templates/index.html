@@ -3,10 +3,34 @@
 <head>
     <meta charset="utf-8">
     <title>Electrode</title>
-    <link href="/app/css/style.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link href="app/css/style.css" rel="stylesheet">
 </head>
 
 <body>
     <h1>Hello World!</h1>
+    <a href="http://localhost:4040/">Tech</a>
+
+    <div id="stuff"></div>
+
+    <script type="text/jsx">
+    // Putting all my JSX and react code here
+    var TextBox = React.createClass({
+        render: function() {
+            return (
+                <div className="textBox">
+                    Hey! I am a text box.
+                </div>
+            );
+        }
+    });
+    React.render(
+        <TextBox />,
+        document.getElementById('stuff')
+    );
+    </script>
+
 </body>
 </html>
